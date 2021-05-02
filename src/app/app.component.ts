@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularLearnCourse2';
+  onMediaItemDelete = (mediaItem: any) => {};
 }
