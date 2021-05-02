@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MediaComponentComponent } from './media-component/media-component.component';
 import { MediaItemListComponent } from './media-item-list/media-item-list.component';
+import { FavoriteDirective } from './favorite.directive';
+import { CategoryListPipe } from './category-list.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MediaComponentComponent,
-    MediaItemListComponent
+    MediaItemListComponent,
+    FavoriteDirective,
+    CategoryListPipe,
   ],
   imports: [
     BrowserModule,
