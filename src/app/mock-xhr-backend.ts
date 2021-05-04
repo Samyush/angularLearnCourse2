@@ -53,7 +53,7 @@ export class MockXHRBackend implements HttpBackend {
       switch (request.method) {
         case 'GET':
           if (request.urlWithParams.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
-            let medium;
+            let medium: any;
             if (request.urlWithParams.indexOf('?') >= 0) {
               medium = request.urlWithParams.split('=')[1];
               if (medium === 'undefined') { medium = ''; }
@@ -98,15 +98,15 @@ export class MockXHRBackend implements HttpBackend {
     });
   }
 
-  _deleteMediaItem(id) {
-    const mediaItem = this.mediaItems.find(i => i.id === id);
+  _deleteMediaItem(id: any): any {
+    const mediaItem: any = this.mediaItems.find(i => i.id === id);
     const index = this.mediaItems.indexOf(mediaItem);
     if (index >= 0) {
       this.mediaItems.splice(index, 1);
     }
   }
 
-  _getNewId() {
+  _getNewId(): any {
     if (this.mediaItems.length > 0) {
       return Math.max.apply(Math, this.mediaItems.map(mediaItem => mediaItem.id)) + 1;
     } else {
