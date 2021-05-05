@@ -14,6 +14,7 @@ import { CategoryListPipe } from './category-list.pipe';
 import { lookupLists, lookupListToken} from './providers';
 import {MockXHRBackend} from './mock-xhr-backend';
 import {routing} from './app.routing';
+// import {MediaItemService} from './media-item.service';
 // import {NewItemModule} from './new-item/new-item.module';
 
 // const lookupList = {mediums: ['Movies', 'Series']};
@@ -37,6 +38,8 @@ import {routing} from './app.routing';
     // NewItemModule,
   ],
   providers: [
+    // MediaItemService, <-- this media item services is removed as this would load/
+    // in all components and is replaced by providing services in roots using injectables
     // {provide: 'lookupListToken', useValue: lookupList}
     {provide: lookupListToken, useValue: lookupLists},
     // the left side data i.e. of provide, is called in other component and use value or what is executed is of RHS
