@@ -31,6 +31,7 @@ export class MediaItemFormComponent implements OnInit {
       }
     );
   }
+  // code dont show or function with out onInit function
   yearValidator = (control: FormControl) => {
     if (control.value.trim().legth === 0){
       return null;

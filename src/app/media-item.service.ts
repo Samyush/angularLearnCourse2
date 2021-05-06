@@ -60,7 +60,7 @@ export class MediaItemService {
     };
     // the below code in reads and sends/ returns data of above mediaItems
     // return this.mediaItems;
-    return this.http.get<MediaItemResponse>('mediaitems', getOptions)
+    return this.http.get<MediaItemResponse>('mediaitems', getOptions) // this left mediaItems is from MediaItemResponses interface
       .pipe(map(response => response.mediaItems),
         catchError(this.handleError));
   }

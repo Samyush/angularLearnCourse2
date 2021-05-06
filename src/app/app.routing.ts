@@ -10,7 +10,8 @@ const appRoutes: Routes = [
       m => m.NewItemModule
     )
   },
-// {path: 'add', component: MediaItemFormComponent},
+  // {path: 'add', component: MediaItemFormComponent},
+  // the below path is called as route parameter such that in angular project it is accessible through all components
   {path: ':medium', component: MediaItemListComponent},
   {path: '', redirectTo: 'all', pathMatch: 'full'}
 ];

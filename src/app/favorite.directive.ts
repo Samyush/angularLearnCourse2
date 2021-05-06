@@ -12,6 +12,7 @@ export class FavoriteDirective {
   @HostListener('mouseleave') onMouseLeave = () => {
     this.hovering = false;
   }
+  // this below here gets teh appFavorite data and sets the value which is again bonded back
   @Input() set appFavorite(value: any){
   this.isFavorite = value;
 }

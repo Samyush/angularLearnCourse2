@@ -7,6 +7,8 @@ import { Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
 })
 export class MediaComponentComponent implements OnInit {
   @Input() mediaItem: any;
+  // the output emits the down action over click and is again
+  // caught in media component as (delete) inside <app-media-component>
   @Output() delete = new EventEmitter();
   name = 'The Redemption';
   // wasWatched = () => true;
